@@ -10,22 +10,16 @@ public class hw05_103051060 {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
 		System.out.println("請輸入整數: ");
-		long a =scn.nextLong();
-		//String b=Long.toString(a);
-		//char[]data = b.toCharArray();
-		change(a);
-		//change(data.length-1,data);
+		long x = scn.nextLong();
+		Change(x);
 	}
-	public static void change(long x){
-		
-	}
-	/*public static int change(int x,char[]y){		
-		System.out.print(y[x]);
-		if(x==0){				
-			return 0;
-		}else{			
-			return change((x-1), y);			
+	public static long Change(long a){
+		if(a==0){
+			return a;
+		}else{
+			System.out.print(a%10);
+			a=a/10;
+			return Change(a);
 		}
 	}
-*/
 }
